@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>CGI Post Example</TITLE>
+</HEAD>
+
+<BODY>
+<FORM ACTION="http://localhost:8080/cgi-bin/post.cgi" METHOD="POST">
+    <B>Input your name:</B>
+    <INPUT name=RealName type=text size=40 maxlength=60 value="Name"><P>
+    Пол: <INPUT name=Sex type=Radio value="male" CHECKED>- male <INPUT name=Sex type=Radio value="female">- female<P>
+    <INPUT name=Submit type=submit value="Submit"><BR>
+    <INPUT name=Reset type=reset value="Reset">
+
+</FORM>
+</BODY>
+</HTML>
