@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 {
 	entry entries[MAX_ENTRIES];
-	register int x,m=0;
+	int x,m=0;
 	int cl;
 //	printf("Content-type: text/html%c%c",10,10);
 	if(strcmp(getenv("REQUEST_METHOD"),"POST"))
@@ -90,7 +90,7 @@ char *fmakeword(FILE *f, char stop, int *cl) {
 char x2c(char *what) {
 /* Предназначена для преобразования шестнадцатиричного кода символа в код символа
 */
-	register char digit;
+	char digit;
 
 	digit = (what[0] >= 'A' ? ((what[0] & 0xdf) - 'A')+10 : (what[0] - '0'));
 	digit *= 16;
@@ -100,7 +100,7 @@ char x2c(char *what) {
 
 void unescape_url(char *url) {
 
-	register int x,y;
+	int x,y;
 
 	for(x=0,y=0;url[y];++x,++y) {
 		if((url[x] = url[y]) == '%') {
@@ -113,7 +113,7 @@ void unescape_url(char *url) {
 
 void plustospace(char *str) {
 /*замена символов "+" на символ "пробел"*/
-	register int x;
+	int x;
 
 	for(x=0;str[x];x++) if(str[x] == '+') str[x] = ' ';
 }
