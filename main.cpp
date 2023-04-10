@@ -3,7 +3,6 @@
 
 int main(int argc, char* argv[])
 {
-	//chdir("..");
 	std::string config_file("webserv.conf");
 	if (argc == 2)
     	config_file = argv[1];
@@ -21,5 +20,5 @@ int main(int argc, char* argv[])
 
 	ft::Server(config_file).Run();
 
-    return 0;
+	return 0;
 }
